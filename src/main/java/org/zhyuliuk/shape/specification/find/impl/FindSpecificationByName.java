@@ -1,9 +1,9 @@
 package org.zhyuliuk.shape.specification.find.impl;
 
 import org.zhyuliuk.shape.entity.impl.EntityBall;
-import org.zhyuliuk.shape.specification.find.FindSpecificationInterface;
+import org.zhyuliuk.shape.specification.find.FindSpecification;
 
-public class FindSpecificationByName implements FindSpecificationInterface {
+public class FindSpecificationByName implements FindSpecification {
     private String desiredBallName;
 
     public FindSpecificationByName(String desiredName) {

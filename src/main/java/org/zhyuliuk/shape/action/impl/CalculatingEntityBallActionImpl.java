@@ -2,19 +2,19 @@ package org.zhyuliuk.shape.action.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.zhyuliuk.shape.action.CalculatingEntityBallActionInterface;
+import org.zhyuliuk.shape.action.CalculatingEntityBallAction;
 import org.zhyuliuk.shape.entity.impl.EntityBall;
 import org.zhyuliuk.shape.exception.ShapesException;
 
-public class CalculatingEntityBallAction implements CalculatingEntityBallActionInterface {
+public class CalculatingEntityBallActionImpl implements CalculatingEntityBallAction {
     private static final Logger logger = LogManager.getLogger();
-    private static CalculatingEntityBallAction instance ;
-    private CalculatingEntityBallAction() {
+    private static CalculatingEntityBallActionImpl instance ;
+    private CalculatingEntityBallActionImpl() {
     }
 
-    public static CalculatingEntityBallAction getInstance() {
+    public static CalculatingEntityBallActionImpl getInstance() {
         if (instance == null) {
-            instance = new CalculatingEntityBallAction();
+            instance = new CalculatingEntityBallActionImpl();
         }
         return instance;
     }

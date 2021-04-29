@@ -3,7 +3,7 @@ package org.zhyuliuk.shape.action;
 import org.zhyuliuk.shape.entity.impl.EntityBall;
 import org.zhyuliuk.shape.exception.ShapesException;
 
-public interface CalculatingEntityBallActionInterface {
+public interface CalculatingEntityBallAction {
     public double calculateSurfaceArea(EntityBall entityBall) throws ShapesException;
     public double calculateVolumeBall(EntityBall entityBall) throws ShapesException;
     public double relationOxy(EntityBall sphere) throws ShapesException;

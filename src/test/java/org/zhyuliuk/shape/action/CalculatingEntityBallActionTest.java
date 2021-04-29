@@ -2,15 +2,14 @@ package org.zhyuliuk.shape.action;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.zhyuliuk.shape.action.impl.CalculatingEntityBallAction;
+import org.zhyuliuk.shape.action.impl.CalculatingEntityBallActionImpl;
 import org.zhyuliuk.shape.entity.impl.EntityBall;
-import org.zhyuliuk.shape.entity.impl.EntityPoint;
+import org.zhyuliuk.shape.entity.impl.Point;
 import org.zhyuliuk.shape.exception.ShapesException;
 
 public class CalculatingEntityBallActionTest {
-    private final static CalculatingEntityBallActionInterface calculatingEntityBallAction = CalculatingEntityBallAction.getInstance();
-
-    private final static EntityBall entityBall = new EntityBall("name",new EntityPoint(0,0,0),1) ;
+    private final static CalculatingEntityBallAction calculatingEntityBallAction = CalculatingEntityBallActionImpl.getInstance();
+    private final static EntityBall entityBall = new EntityBall("name",new Point(0,0,0),1) ;
 
     @Test
     public void calculateSurfaceAreaTest() throws ShapesException {

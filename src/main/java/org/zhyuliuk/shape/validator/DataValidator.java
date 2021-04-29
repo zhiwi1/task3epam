@@ -1,6 +1,6 @@
 package org.zhyuliuk.shape.validator;
 
-import org.zhyuliuk.shape.entity.impl.EntityPoint;
+import org.zhyuliuk.shape.entity.impl.Point;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -8,13 +8,13 @@ import java.nio.file.Paths;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ValidatorData {
+public class DataValidator {
 
     private final static String BALL_REGEX = "^\\s*\\w+((\\s*,\\d+)|(\\s*,\\d+d)|(\\s*,\\d+\\.\\d+)|(\\s*,\\d+\\.\\d+d)){4}$";
 
 
 
-    public static boolean isBallValid(EntityPoint point,double radius) {
+    public static boolean isBallValid(Point point, double radius) {
         return radius <= 0 && point != null;
     }
     public static boolean isLineValid(String lineBall){

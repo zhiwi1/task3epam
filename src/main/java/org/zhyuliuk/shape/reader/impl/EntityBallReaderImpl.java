@@ -2,7 +2,7 @@ package org.zhyuliuk.shape.reader.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.zhyuliuk.shape.validator.ValidatorData;
+import org.zhyuliuk.shape.validator.DataValidator;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,16 +13,16 @@ import java.util.List;
 
 import java.util.stream.Collectors;
 
-public class EntityBallReader {
+public class EntityBallReaderImpl {
     private final static Logger logger = LogManager.getLogger();
-    private static EntityBallReader instance;
+    private static EntityBallReaderImpl instance;
 
-    private EntityBallReader() {
+    private EntityBallReaderImpl() {
     }
 
-    public static EntityBallReader getInstance() {
+    public static EntityBallReaderImpl getInstance() {
         if (instance == null) {
-            instance = new EntityBallReader();
+            instance = new EntityBallReaderImpl();
         }
         return instance;
     }
@@ -39,18 +39,11 @@ public class EntityBallReader {
     public List<String> readCorrectlyEntityBall(String relativePath) {
         List<String> list = new ArrayList<>();
         try (BufferedReader br = Files.newBufferedReader(Paths.get(relativePath))) {
-            list = br.lines().collect(Collectors.toList());
+            list = br.lines().filter(DataValidator::isLineValid).collect(Collectors.toList());
         } catch (IOException e) {
             logger.info("Error in reading");
         }
-        List<String> correctList=new ArrayList<>();
-        for(String line:list){
-            if(ValidatorData.isLineValid(line)) {
-                correctList.add(line);
-            }
-            }
-
-        return correctList;
+        return list;
     }
 }
 

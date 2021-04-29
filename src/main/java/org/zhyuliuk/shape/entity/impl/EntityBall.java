@@ -1,19 +1,21 @@
 package org.zhyuliuk.shape.entity.impl;
 
-import org.zhyuliuk.shape.entity.ShapeInterface;
 import org.zhyuliuk.shape.exception.ShapesException;
 import org.zhyuliuk.shape.observer.BallEvent;
 import org.zhyuliuk.shape.observer.Observable;
 import org.zhyuliuk.shape.observer.Observer;
 import org.zhyuliuk.shape.observer.impl.BallObserver;
 
-public class EntityBall implements ShapeInterface, Observable {
-    String name;
-    EntityPoint pointCenter;
-    double radius;
-    private final Observer observer = new BallObserver();
+import java.util.ArrayList;
+import java.util.List;
 
-    public EntityBall(String name, EntityPoint pointCenter, double radius) {
+public class EntityBall  implements Observable {
+    private String name;
+    private Point pointCenter;
+    private double radius;
+    private List<BallObserver> observers = new ArrayList<>();
+
+    public EntityBall(String name, Point pointCenter, double radius) {
         this.name = name;
         this.pointCenter = pointCenter;
         this.radius = radius;
@@ -29,11 +31,11 @@ public class EntityBall implements ShapeInterface, Observable {
         notifyObservers();
     }
 
-    public EntityPoint getPointCenter() {
+    public Point getPointCenter() {
         return pointCenter;
     }
 
-    public void setPointCenter(EntityPoint pointCenter) {
+    public void setPointCenter(Point pointCenter) {
         this.pointCenter = pointCenter;
         notifyObservers();
     }
@@ -76,12 +78,25 @@ public class EntityBall implements ShapeInterface, Observable {
                 append('\'').append( ", PointCenter=").append(pointCenter).append(", radius=").append(radius).append( '}');
         return stringBuilder.toString();
     }
+
+    @Override
+    public void attach(BallObserver observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void detach(BallObserver observer) {
+        observers.remove(observer);
+    }
+
     @Override
     public void notifyObservers() {
-        if (observer == null){
+        if (observers == null){
             return;
         }
+        for (BallObserver observer : observers) {
         BallEvent event = new BallEvent(this);
-        observer.parameterChanged(event);
+        observer.parameterChanged(event);}
     }
+
 }

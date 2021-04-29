@@ -1,27 +1,29 @@
 package org.zhyuliuk.shape.repository.impl;
 
-import org.zhyuliuk.shape.entity.ShapeInterface;
 import org.zhyuliuk.shape.entity.impl.EntityBall;
-import org.zhyuliuk.shape.repository.BallRepositoryInterface;
-import org.zhyuliuk.shape.specification.find.FindSpecificationInterface;
-import org.zhyuliuk.shape.specification.sort.SortSpecificationInterface;
+import org.zhyuliuk.shape.repository.BallRepository;
+import org.zhyuliuk.shape.specification.find.FindSpecification;
+import org.zhyuliuk.shape.specification.sort.SortSpecification;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class BallRepository implements BallRepositoryInterface {
-
+public class BallRepositoryImpl implements org.zhyuliuk.shape.repository.BallRepository {
+    //singleton названия не забыть
+    private static final BallRepository instance = new BallRepositoryImpl();
     private List<EntityBall> entityBallList;
 
-    public BallRepository() {
+    private BallRepositoryImpl() {
         entityBallList = new ArrayList<>();
     }
 
-    public BallRepository(List<EntityBall> entityBallList) {
+    private BallRepositoryImpl(List<EntityBall> entityBallList) {
         this.entityBallList = new ArrayList<>(entityBallList);
     }
-
+    public static BallRepository getInstance() {
+        return instance;
+    }
     public List<EntityBall> getEntityBallList() {
         return new ArrayList<>(entityBallList);
     }
@@ -48,7 +50,7 @@ public class BallRepository implements BallRepositoryInterface {
     }
 
     @Override
-    public List query(FindSpecificationInterface specification) {
+    public List query(FindSpecification specification) {
         ArrayList<EntityBall> list = new ArrayList<>();
         for (EntityBall ball : entityBallList) {
             if (specification.specified(ball)) {
@@ -58,9 +60,9 @@ public class BallRepository implements BallRepositoryInterface {
         return list;
     }
     @Override
-    public void sorting(SortSpecificationInterface sortSpecification) {
+    public void sorting(SortSpecification comparator) {
         //Stream need
-//        entityBallList.stream().sorted(sortSpecification);
-        Collections.sort(entityBallList,sortSpecification);
+//        entityBallList.stream().sorted(comparator);
+        Collections.sort(entityBallList,comparator);
     }
 }

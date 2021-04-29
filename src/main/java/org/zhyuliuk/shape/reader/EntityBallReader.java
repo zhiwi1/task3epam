@@ -2,7 +2,7 @@ package org.zhyuliuk.shape.reader;
 
 import java.util.List;
 
-public interface EntityBallReaderInterface {
+public interface EntityBallReader {
     public List readEntityBall(String relativePath);
 
 }

@@ -3,9 +3,9 @@ package org.zhyuliuk.shape.specification.find.impl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.zhyuliuk.shape.entity.impl.EntityBall;
-import org.zhyuliuk.shape.specification.find.FindSpecificationInterface;
+import org.zhyuliuk.shape.specification.find.FindSpecification;
 
-public class FindSpecificationByDistanceFromCenter implements FindSpecificationInterface {
+public class FindSpecificationByDistanceFromCenter implements FindSpecification {
     private final static Logger logger = LogManager.getLogger();
     private double distance;
     public FindSpecificationByDistanceFromCenter(double desiredDistance) {

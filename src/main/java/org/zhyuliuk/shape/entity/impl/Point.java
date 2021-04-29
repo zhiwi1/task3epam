@@ -1,11 +1,13 @@
 package org.zhyuliuk.shape.entity.impl;
 
-import org.zhyuliuk.shape.entity.ShapeInterface;
 
-public class EntityPoint implements ShapeInterface {
-    private double x, y, z;
 
-    public EntityPoint(double x, double y, double z) {
+public class Point  {
+    private double x;
+    private double y;
+    private double z;
+
+    public Point(double x, double y, double z) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -40,7 +42,7 @@ public class EntityPoint implements ShapeInterface {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        EntityPoint entityPoint = (EntityPoint) o;
+        Point entityPoint = (Point) o;
         return x == entityPoint.x && y == entityPoint.y && z == entityPoint.z;
     }
 

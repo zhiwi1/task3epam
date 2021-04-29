@@ -3,13 +3,13 @@ package org.zhyuliuk.shape.reader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zhyuliuk.shape.exception.ShapesException;
-import org.zhyuliuk.shape.reader.impl.EntityBallReader;
+import org.zhyuliuk.shape.reader.impl.EntityBallReaderImpl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EntityBallReaderTest {
-    private final static EntityBallReader ballReader = EntityBallReader.getInstance();
+    private final static EntityBallReaderImpl ballReader = EntityBallReaderImpl.getInstance();
     private final static String PATH_NAME = "src/test/resources/testRead.txt";
 
     @Test(description = "Test of reading")
