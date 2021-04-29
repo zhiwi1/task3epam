@@ -7,9 +7,11 @@ public class BallParameter {
     private double y;
     private double z;
     private double radius;
-BallParameter(){
 
-}
+    BallParameter() {
+
+    }
+
     public BallParameter(double x, double y, double z, double radius) {
         this.x = x;
         this.y = y;
@@ -59,11 +61,11 @@ BallParameter(){
 
     @Override
     public int hashCode() {
-    double result=1;
-    result=13*result+x;
-    result=13*result+y;
-    result=13*result+z;
-    result=13*result+radius;
-        return Objects.hash(x, y, z, radius);
+        double result = 1;
+        result = 13 * result + x;
+        result = 13 * result + y;
+        result = 13 * result + z;
+        result = 13 * result + radius;
+        return (int) result;
     }
 }
