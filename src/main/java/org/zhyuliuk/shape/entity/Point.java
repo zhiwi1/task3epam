@@ -1,4 +1,4 @@
-package org.zhyuliuk.shape.entity.impl;
+package org.zhyuliuk.shape.entity;
 
 
 
@@ -58,7 +58,7 @@ public class Point  {
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
+        final StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("ShapePoint{").append("x=").append(x).
                 append(", y=").append(y).append(", z=").append(z).append("}");
         return stringBuilder.toString();

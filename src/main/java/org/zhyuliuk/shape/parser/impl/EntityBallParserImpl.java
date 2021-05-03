@@ -2,10 +2,8 @@ package org.zhyuliuk.shape.parser.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.zhyuliuk.shape.entity.impl.Point;
 import org.zhyuliuk.shape.parser.EntityBallParser;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -25,8 +23,6 @@ public class EntityBallParserImpl implements EntityBallParser {
         }
         return instance;
     }
-// не парсер
-
     public HashMap<String,BallParameter> parse(List<String> list) {
         HashMap<String,BallParameter> map=new HashMap<>();
         for (String str : list) {

@@ -1,0 +1,60 @@
+2021-04-11 20:32:22 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- reading data isnt correct
+2021-04-11 20:40:02 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- error in parsing
+2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- name
+2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 1
+2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 2
+2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 3
+2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 4
+2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- error in parsing
+2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- name
+2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 1
+2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 2
+2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 3
+2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 4
+2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- error in parsing
+2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- name
+2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 1
+2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 2
+2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 3
+2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 4
+2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- error in parsing
+2021-04-11 21:07:55 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- name
+2021-04-11 21:07:55 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 1
+2021-04-11 21:07:55 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 2
+2021-04-11 21:07:55 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 3
+2021-04-11 21:07:55 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 4
+2021-04-29 16:58:07 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- name
+2021-04-29 16:58:07 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 1
+2021-04-29 16:58:07 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 2
+2021-04-29 16:58:07 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 3
+2021-04-29 16:58:07 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 4
+2021-04-29 17:01:47 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- name
+2021-04-29 17:01:47 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 1
+2021-04-29 17:01:47 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 2
+2021-04-29 17:01:47 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 3
+2021-04-29 17:01:47 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 4
+2021-05-02 20:00:42 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- name
+2021-05-02 20:00:42 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 1
+2021-05-02 20:00:42 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 2
+2021-05-02 20:00:42 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 3
+2021-05-02 20:00:42 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 4
+2021-05-02 21:41:01 [main] INFO  zhyuliuk.shape.reader.impl.EntityBallReaderImpl- Error in reading
+2021-05-02 21:43:59 [main] INFO  zhyuliuk.shape.reader.impl.EntityBallReaderImpl- Error in reading
+2021-05-02 21:47:28 [main] INFO  zhyuliuk.shape.reader.impl.EntityBallReaderImpl- Error in reading
+2021-05-02 21:48:10 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- name
+2021-05-02 21:48:10 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 1
+2021-05-02 21:48:10 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 2
+2021-05-02 21:48:10 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 3
+2021-05-02 21:48:10 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 4
+2021-05-02 21:52:21 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- name
+2021-05-02 21:52:21 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 1
+2021-05-02 21:52:21 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 2
+2021-05-02 21:52:21 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 3
+2021-05-02 21:52:21 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 4
+2021-05-03 01:03:33 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- name
+2021-05-03 01:03:33 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 1
+2021-05-03 01:03:33 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 2
+2021-05-03 01:03:33 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 3
+2021-05-03 01:03:33 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 4
+2021-05-03 01:03:42 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- name
+2021-05-03 01:03:42 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 1

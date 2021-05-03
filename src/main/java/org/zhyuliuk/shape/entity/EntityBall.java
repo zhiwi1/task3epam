@@ -1,15 +1,18 @@
-package org.zhyuliuk.shape.entity.impl;
+package org.zhyuliuk.shape.entity;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.zhyuliuk.shape.exception.ShapesException;
 import org.zhyuliuk.shape.observer.BallEvent;
 import org.zhyuliuk.shape.observer.Observable;
-import org.zhyuliuk.shape.observer.Observer;
 import org.zhyuliuk.shape.observer.impl.BallObserver;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EntityBall  implements Observable {
+    private final static Logger logger= LogManager.getLogger();
     private String name;
     private Point pointCenter;
     private double radius;
@@ -49,6 +52,7 @@ public class EntityBall  implements Observable {
             throw new ShapesException("Exception: radius can't be < 0 radius="+radius);
         }
         this.radius = radius;
+        
         notifyObservers();
     }
 
@@ -73,7 +77,7 @@ public class EntityBall  implements Observable {
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder=new StringBuilder();
+        final StringBuilder stringBuilder=new StringBuilder();
         stringBuilder.append("EntityBall{name='").append(name).
                 append('\'').append( ", PointCenter=").append(pointCenter).append(", radius=").append(radius).append( '}');
         return stringBuilder.toString();
@@ -91,12 +95,13 @@ public class EntityBall  implements Observable {
 
     @Override
     public void notifyObservers() {
-        if (observers == null){
+        if (observers.isEmpty()){
             return;
         }
         for (BallObserver observer : observers) {
         BallEvent event = new BallEvent(this);
         observer.parameterChanged(event);}
+        logger.log(Level.INFO,"changed parameter");
     }
 
 }

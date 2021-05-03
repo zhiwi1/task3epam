@@ -1,6 +1,6 @@
 package org.zhyuliuk.shape.specification.find.impl;
 
-import org.zhyuliuk.shape.entity.impl.EntityBall;
+import org.zhyuliuk.shape.entity.EntityBall;
 import org.zhyuliuk.shape.specification.find.FindSpecification;
 
 public class FindSpecificationByName implements FindSpecification {

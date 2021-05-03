@@ -1,9 +1,9 @@
 package org.zhyuliuk.shape.repository;
 
 
-import org.zhyuliuk.shape.entity.impl.EntityBall;
+import org.zhyuliuk.shape.entity.EntityBall;
 import org.zhyuliuk.shape.specification.find.FindSpecification;
-import org.zhyuliuk.shape.specification.sort.SortSpecification;
+import org.zhyuliuk.shape.specification.sort.BallComparator;
 
 import java.util.List;
 
@@ -13,10 +13,10 @@ public interface BallRepository {
 
     public void removeBall(EntityBall ball);
 
-    public void updateBall(int position,EntityBall ball);
+    public void updateBall(int position, EntityBall ball);
 
-    public List query(FindSpecification specification);
+    public List<EntityBall> query(FindSpecification specification);
 
-    public void sorting(SortSpecification sortSpecification);
+    public List<EntityBall> sorting(BallComparator sortSpecification);
 
 }

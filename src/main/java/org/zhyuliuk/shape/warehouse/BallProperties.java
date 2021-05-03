@@ -51,7 +51,7 @@ public class BallProperties {
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder=new StringBuilder();
+        final StringBuilder stringBuilder=new StringBuilder();
         stringBuilder.append("BallProperties{").append("volume=").
                 append(volume).append(", area=").append(area).append("}");
         return stringBuilder.toString();

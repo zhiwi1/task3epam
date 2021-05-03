@@ -32,7 +32,7 @@ public class WareHouse {
         return new BallProperties(data);
     }
 
-    public void updateParameters(String name, double area, double volume) throws ShapesException {
+    public void updateParameters(String name, double volume, double area) throws ShapesException {
         BallProperties data = ellipseMap.get(name);
         if (data == null) {
             throw new ShapesException("No  elements in warehouse");

@@ -1,13 +1,13 @@
 package org.zhyuliuk.shape.repository.impl;
 
-import org.zhyuliuk.shape.entity.impl.EntityBall;
+import org.zhyuliuk.shape.entity.EntityBall;
 import org.zhyuliuk.shape.repository.BallRepository;
 import org.zhyuliuk.shape.specification.find.FindSpecification;
-import org.zhyuliuk.shape.specification.sort.SortSpecification;
+import org.zhyuliuk.shape.specification.sort.BallComparator;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BallRepositoryImpl implements org.zhyuliuk.shape.repository.BallRepository {
     //singleton названия не забыть
@@ -50,7 +50,7 @@ public class BallRepositoryImpl implements org.zhyuliuk.shape.repository.BallRep
     }
 
     @Override
-    public List query(FindSpecification specification) {
+    public List<EntityBall> query(FindSpecification specification) {
         ArrayList<EntityBall> list = new ArrayList<>();
         for (EntityBall ball : entityBallList) {
             if (specification.specified(ball)) {
@@ -60,9 +60,9 @@ public class BallRepositoryImpl implements org.zhyuliuk.shape.repository.BallRep
         return list;
     }
     @Override
-    public void sorting(SortSpecification comparator) {
-        //Stream need
-//        entityBallList.stream().sorted(comparator);
-        Collections.sort(entityBallList,comparator);
+    public List<EntityBall> sorting(BallComparator comparator) {
+
+      return entityBallList.stream().sorted(comparator).collect(Collectors.toList());
+
     }
 }

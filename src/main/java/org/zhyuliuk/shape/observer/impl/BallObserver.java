@@ -3,9 +3,8 @@ package org.zhyuliuk.shape.observer.impl;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.zhyuliuk.shape.action.CalculatingEntityBallAction;
 import org.zhyuliuk.shape.action.impl.CalculatingEntityBallActionImpl;
-import org.zhyuliuk.shape.entity.impl.EntityBall;
+import org.zhyuliuk.shape.entity.EntityBall;
 import org.zhyuliuk.shape.exception.ShapesException;
 import org.zhyuliuk.shape.observer.BallEvent;
 import org.zhyuliuk.shape.observer.Observer;
@@ -28,7 +27,8 @@ public class BallObserver implements Observer {
         String name = source.getName();
         WareHouse warehouse = WareHouse.getInstance();
         try{
-            warehouse.updateParameters(name, area, volume);
+
+            warehouse.updateParameters(name, volume, area);
         }catch (ShapesException e){
             logger.log(Level.WARN, e.getMessage());
         }

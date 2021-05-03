@@ -4,16 +4,16 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.zhyuliuk.shape.action.impl.CalculatingEntityBallActionImpl;
-import org.zhyuliuk.shape.entity.impl.EntityBall;
+import org.zhyuliuk.shape.entity.EntityBall;
 import org.zhyuliuk.shape.exception.ShapesException;
 import org.zhyuliuk.shape.specification.find.FindSpecification;
 
-public class FindSpecificationByArea implements FindSpecification {
+public class FindSpecificationBySurfaceArea implements FindSpecification {
     private final static Logger logger = LogManager.getLogger();
     private double minDesiredArea;
     private double maxDesiredArea;
 
-    public FindSpecificationByArea(int desiredAreaMin, int desiredAreaMax) {
+    public FindSpecificationBySurfaceArea(int desiredAreaMin, int desiredAreaMax) {
         super();
         this.minDesiredArea = desiredAreaMin;
         this.maxDesiredArea = desiredAreaMax;
@@ -29,7 +29,6 @@ public class FindSpecificationByArea implements FindSpecification {
         } catch (ShapesException exception) {
             logger.log(Level.INFO, "exception in calculating area in " + entityBall);
         }
-
         return (area >= minDesiredArea) && (area <= maxDesiredArea);
     }
 }

@@ -3,8 +3,8 @@ package org.zhyuliuk.shape.action;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zhyuliuk.shape.action.impl.CalculatingEntityBallActionImpl;
-import org.zhyuliuk.shape.entity.impl.EntityBall;
-import org.zhyuliuk.shape.entity.impl.Point;
+import org.zhyuliuk.shape.entity.EntityBall;
+import org.zhyuliuk.shape.entity.Point;
 import org.zhyuliuk.shape.exception.ShapesException;
 
 public class CalculatingEntityBallActionTest {

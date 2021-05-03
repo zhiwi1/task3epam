@@ -1,7 +1,5 @@
 package org.zhyuliuk.shape.parser;
 
-import org.zhyuliuk.shape.entity.impl.EntityBall;
-import org.zhyuliuk.shape.exception.ShapesException;
 import org.zhyuliuk.shape.parser.impl.BallParameter;
 
 import java.util.HashMap;

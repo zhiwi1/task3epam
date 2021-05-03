@@ -1,6 +1,6 @@
 package org.zhyuliuk.shape.observer;
 
-import org.zhyuliuk.shape.entity.impl.EntityBall;
+import org.zhyuliuk.shape.entity.EntityBall;
 
 import java.util.EventObject;
 

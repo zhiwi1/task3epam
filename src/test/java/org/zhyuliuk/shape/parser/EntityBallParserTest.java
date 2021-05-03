@@ -4,8 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.zhyuliuk.shape.entity.impl.EntityBall;
-import org.zhyuliuk.shape.entity.impl.Point;
 import org.zhyuliuk.shape.exception.ShapesException;
 import org.zhyuliuk.shape.parser.impl.BallParameter;
 import org.zhyuliuk.shape.parser.impl.EntityBallParserImpl;
@@ -26,8 +24,6 @@ public class EntityBallParserTest {
         String ballLine = "name,1,2,3,4";
         list.add(ballLine);
         HashMap<String, BallParameter> actualMap = parser.parse(list);
-
-
         Assert.assertEquals(actualMap, expectedMap);
     }
 }

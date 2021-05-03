@@ -1,35 +1,16 @@
-2021-04-11 20:32:22 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- reading data isnt correct
-2021-04-11 20:40:02 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- error in parsing
-2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- name
-2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 1
-2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 2
-2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 3
-2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 4
-2021-04-11 20:42:49 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- error in parsing
-2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- name
-2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 1
-2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 2
-2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 3
-2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 4
-2021-04-11 20:58:18 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- error in parsing
-2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- name
-2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 1
-2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 2
-2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 3
-2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 4
-2021-04-11 21:05:05 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- error in parsing
-2021-04-11 21:07:55 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- name
-2021-04-11 21:07:55 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 1
-2021-04-11 21:07:55 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 2
-2021-04-11 21:07:55 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 3
-2021-04-11 21:07:55 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParser- 4
-2021-04-29 16:58:07 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- name
-2021-04-29 16:58:07 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 1
-2021-04-29 16:58:07 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 2
-2021-04-29 16:58:07 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 3
-2021-04-29 16:58:07 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 4
-2021-04-29 17:01:47 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- name
-2021-04-29 17:01:47 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 1
-2021-04-29 17:01:47 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 2
-2021-04-29 17:01:47 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 3
-2021-04-29 17:01:47 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 4
+2021-05-03 01:03:42 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 2
+2021-05-03 01:03:42 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 3
+2021-05-03 01:03:42 [main] INFO  zhyuliuk.shape.parser.impl.EntityBallParserImpl- 4
+2021-05-03 15:30:37 [main] INFO  org.zhyuliuk.shape.entity.EntityBall- changed parameter
+2021-05-03 15:30:52 [main] INFO  org.zhyuliuk.shape.entity.EntityBall- changed parameter
+2021-05-03 15:35:09 [main] INFO  org.zhyuliuk.shape.entity.EntityBall- changed parameter
+2021-05-03 15:42:19 [main] INFO  org.zhyuliuk.shape.entity.EntityBall- changed parameter
+2021-05-03 15:44:06 [main] INFO  org.zhyuliuk.shape.entity.EntityBall- changed parameter
+2021-05-03 17:08:38 [main] INFO  shape.specification.sort.impl.SortSpecificationByDistanceFromCenter- 5.385164807134504
+2021-05-03 17:08:38 [main] INFO  shape.specification.sort.impl.SortSpecificationByDistanceFromCenter- 4.69041575982343
+2021-05-03 17:08:38 [main] INFO  shape.specification.sort.impl.SortSpecificationByDistanceFromCenter- 1.7320508075688772
+2021-05-03 17:08:38 [main] INFO  shape.specification.sort.impl.SortSpecificationByDistanceFromCenter- 5.385164807134504
+2021-05-03 17:11:59 [main] INFO  shape.specification.sort.impl.SortSpecificationByDistanceFromCenter- 5.385164807134504
+2021-05-03 17:11:59 [main] INFO  shape.specification.sort.impl.SortSpecificationByDistanceFromCenter- 3.7416573867739413
+2021-05-03 17:11:59 [main] INFO  shape.specification.sort.impl.SortSpecificationByDistanceFromCenter- 1.7320508075688772
+2021-05-03 17:11:59 [main] INFO  shape.specification.sort.impl.SortSpecificationByDistanceFromCenter- 5.385164807134504
