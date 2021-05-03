@@ -1,6 +1,4 @@
-package org.zhyuliuk.shape.parser.impl;
-
-import java.util.Objects;
+package org.zhyuliuk.shape.parser;
 
 public class BallParameter {
     private double x;
@@ -8,7 +6,7 @@ public class BallParameter {
     private double z;
     private double radius;
 
-    BallParameter() {
+    public BallParameter() {
 
     }
 

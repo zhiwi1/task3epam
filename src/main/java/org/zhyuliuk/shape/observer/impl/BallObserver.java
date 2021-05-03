@@ -11,13 +11,14 @@ import org.zhyuliuk.shape.observer.Observer;
 import org.zhyuliuk.shape.warehouse.WareHouse;
 
 public class BallObserver implements Observer {
-    private final static Logger logger= LogManager.getLogger();
+    private final static Logger logger = LogManager.getLogger();
+
     @Override
     public void parameterChanged(BallEvent event) {
-        var service= CalculatingEntityBallActionImpl.getInstance();
+        var service = CalculatingEntityBallActionImpl.getInstance();
         double area = 0;
         double volume = 0;
-        EntityBall source=event.getSource();
+        EntityBall source = event.getSource();
         try {
             area = service.calculateSurfaceArea(source);
             volume = service.calculateVolumeBall(source);
@@ -26,10 +27,10 @@ public class BallObserver implements Observer {
         }
         String name = source.getName();
         WareHouse warehouse = WareHouse.getInstance();
-        try{
+        try {
 
-            warehouse.updateParameters(name, volume, area);
-        }catch (ShapesException e){
+            warehouse.updateProperties(name, volume, area);
+        } catch (ShapesException e) {
             logger.log(Level.WARN, e.getMessage());
         }
     }

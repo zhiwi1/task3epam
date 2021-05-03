@@ -6,12 +6,11 @@ import org.zhyuliuk.shape.entity.EntityBall;
 import org.zhyuliuk.shape.exception.ShapesException;
 import org.zhyuliuk.shape.factory.FactoryShape;
 import org.zhyuliuk.shape.parser.EntityBallParser;
-import org.zhyuliuk.shape.parser.impl.BallParameter;
+import org.zhyuliuk.shape.parser.BallParameter;
 import org.zhyuliuk.shape.parser.impl.EntityBallParserImpl;
 import org.zhyuliuk.shape.reader.impl.EntityBallReaderImpl;
 import org.zhyuliuk.shape.repository.BallRepository;
 import org.zhyuliuk.shape.repository.impl.BallRepositoryImpl;
-import org.zhyuliuk.shape.warehouse.BallProperties;
 import org.zhyuliuk.shape.warehouse.WareHouse;
 
 import java.util.HashMap;
@@ -23,16 +22,14 @@ public class Main {
         EntityBallReaderImpl ballReader = EntityBallReaderImpl.getInstance();
         List<String> ballListString = ballReader.readCorrectlyEntityBall(PATH_NAME);
         EntityBallParser ballParser = EntityBallParserImpl.getInstance();
-        HashMap<String, BallParameter> hashMap = ballParser.parse(ballListString);
-        FactoryShape factory=new FactoryShape();
-        List<EntityBall> entityBallList=factory.createBalls(hashMap);
-        System.out.println(entityBallList.get(0));
-        BallRepository ballRepository= BallRepositoryImpl.getInstance();
+        HashMap<String, BallParameter> hashMap = ballParser.parseAllLines(ballListString);
+        FactoryShape factory = new FactoryShape();
+        List<EntityBall> entityBallList = factory.createBalls(hashMap);
+        BallRepository ballRepository = BallRepositoryImpl.getInstance();
         ballRepository.addBall(entityBallList.get(0));
-        WareHouse wareHouse=WareHouse.getInstance();
-        CalculatingEntityBallAction action=CalculatingEntityBallActionImpl.getInstance();
-        wareHouse.putParameters(entityBallList.get(0).getName(),action.calculateSurfaceArea(entityBallList.get(0)),action.calculateVolumeBall(entityBallList.get(0)));
-
+        WareHouse wareHouse = WareHouse.getInstance();
+        CalculatingEntityBallAction action = CalculatingEntityBallActionImpl.getInstance();
+        wareHouse.putProperties(entityBallList.get(0).getName(), action.calculateSurfaceArea(entityBallList.get(0)), action.calculateVolumeBall(entityBallList.get(0)));
     }
 }
 

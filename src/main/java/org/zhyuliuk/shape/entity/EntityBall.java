@@ -11,8 +11,7 @@ import org.zhyuliuk.shape.observer.impl.BallObserver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EntityBall  implements Observable {
-    private final static Logger logger= LogManager.getLogger();
+public class EntityBall implements Observable {
     private String name;
     private Point pointCenter;
     private double radius;
@@ -23,7 +22,6 @@ public class EntityBall  implements Observable {
         this.pointCenter = pointCenter;
         this.radius = radius;
     }
-
 
     public String getName() {
         return name;
@@ -47,12 +45,12 @@ public class EntityBall  implements Observable {
         return radius;
     }
 
-    public void setRadius(int radius)  throws ShapesException{
-        if ( radius < 0) {
-            throw new ShapesException("Exception: radius can't be < 0 radius="+radius);
+    public void setRadius(int radius) throws ShapesException {
+        if (radius < 0) {
+            throw new ShapesException("Exception: radius can't be < 0 radius=" + radius);
         }
         this.radius = radius;
-        
+
         notifyObservers();
     }
 
@@ -61,7 +59,22 @@ public class EntityBall  implements Observable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         EntityBall entityBall = (EntityBall) o;
-        return radius == entityBall.radius && name.equals(entityBall.name) && pointCenter.equals(entityBall.pointCenter);
+
+        if (name == null) {
+            if (entityBall.name != null) {
+                return false;
+            }
+        } else if (!name.equals(entityBall.name)) {
+            return false;
+        }
+        if (pointCenter == null) {
+            if (entityBall.pointCenter != null) {
+                return false;
+            }
+        } else if (!pointCenter.equals(entityBall.pointCenter)) {
+            return false;
+        }
+        return radius == entityBall.radius;
     }
 
     @Override
@@ -77,9 +90,9 @@ public class EntityBall  implements Observable {
 
     @Override
     public String toString() {
-        final StringBuilder stringBuilder=new StringBuilder();
+        final StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("EntityBall{name='").append(name).
-                append('\'').append( ", PointCenter=").append(pointCenter).append(", radius=").append(radius).append( '}');
+                append('\'').append(", PointCenter=").append(pointCenter).append(", radius=").append(radius).append('}');
         return stringBuilder.toString();
     }
 
@@ -95,13 +108,12 @@ public class EntityBall  implements Observable {
 
     @Override
     public void notifyObservers() {
-        if (observers.isEmpty()){
+        if (observers.isEmpty()) {
             return;
         }
         for (BallObserver observer : observers) {
-        BallEvent event = new BallEvent(this);
-        observer.parameterChanged(event);}
-        logger.log(Level.INFO,"changed parameter");
+            BallEvent event = new BallEvent(this);
+            observer.parameterChanged(event);
+        }
     }
-
 }

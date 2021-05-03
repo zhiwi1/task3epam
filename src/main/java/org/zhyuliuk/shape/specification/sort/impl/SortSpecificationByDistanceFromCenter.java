@@ -11,11 +11,9 @@ import org.zhyuliuk.shape.specification.sort.BallComparator;
 
 public class SortSpecificationByDistanceFromCenter implements BallComparator {
     private final static Logger logger = LogManager.getLogger();
-
     @Override
     public int compare(EntityBall firstBall, EntityBall secondBall) {
         CalculatingEntityBallAction calculatingEntityBallAction = CalculatingEntityBallActionImpl.getInstance();
-
         int result = 0;
         try {
             double distanceFirst = calculatingEntityBallAction.calculateDistanceFromCenter(firstBall);
@@ -25,11 +23,9 @@ public class SortSpecificationByDistanceFromCenter implements BallComparator {
             } else if (distanceFirst < distanceSecond) {
                 result = -1;
             }
-
         } catch (ShapesException e) {
             logger.log(Level.INFO, e.getMessage());
         }
-
         return result;
     }
 }

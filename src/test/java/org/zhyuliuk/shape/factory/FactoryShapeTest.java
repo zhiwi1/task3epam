@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zhyuliuk.shape.entity.EntityBall;
 import org.zhyuliuk.shape.entity.Point;
-import org.zhyuliuk.shape.parser.impl.BallParameter;
+import org.zhyuliuk.shape.parser.BallParameter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -57,10 +57,9 @@ public class FactoryShapeTest {
         map.put("name1", new BallParameter(1, 2, 3, 4));
         map.put("name0", new BallParameter(2, 3, 4, 5));
         List<EntityBall> actualBallList = factory.createBalls(map);
-        List <EntityBall> expectedBallList=new ArrayList<>();
-        expectedBallList.add(factory.createShape("name1",new BallParameter(1, 2, 3, 4)));
-        expectedBallList.add(factory.createShape("name0",new BallParameter(2, 3, 4, 5)));
-        Assert.assertEquals(actualBallList,expectedBallList);
-
+        List<EntityBall> expectedBallList = new ArrayList<>();
+        expectedBallList.add(factory.createShape("name1", new BallParameter(1, 2, 3, 4)));
+        expectedBallList.add(factory.createShape("name0", new BallParameter(2, 3, 4, 5)));
+        Assert.assertEquals(actualBallList, expectedBallList);
     }
 }

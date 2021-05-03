@@ -29,7 +29,6 @@ public class FindSpecificationByVolume implements FindSpecification {
         } catch (ShapesException exception) {
             logger.log(Level.INFO, "exception in calculating volume in " + entityBall);
         }
-
         return (volume >= minDesiredVolume) && (volume <= maxDesiredVolume);
     }
 }

@@ -1,8 +1,6 @@
 package org.zhyuliuk.shape.entity;
 
-
-
-public class Point  {
+public class Point {
     private double x;
     private double y;
     private double z;
@@ -12,7 +10,6 @@ public class Point  {
         this.y = y;
         this.z = z;
     }
-
 
     public double getX() {
         return x;

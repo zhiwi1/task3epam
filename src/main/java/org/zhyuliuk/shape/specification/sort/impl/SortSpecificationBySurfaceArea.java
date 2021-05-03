@@ -10,7 +10,7 @@ import org.zhyuliuk.shape.exception.ShapesException;
 import org.zhyuliuk.shape.specification.sort.BallComparator;
 
 public class SortSpecificationBySurfaceArea implements BallComparator {
-    private final static Logger logger= LogManager.getLogger();
+    private final static Logger logger = LogManager.getLogger();
     @Override
     public int compare(EntityBall firstBall, EntityBall secondBall) {
         int result = 0;
@@ -23,10 +23,9 @@ public class SortSpecificationBySurfaceArea implements BallComparator {
             } else if (firstArea < secondArea) {
                 result = -1;
             }
-        }catch (ShapesException exception){
-            logger.log(Level.INFO,exception.getMessage());
+        } catch (ShapesException exception) {
+            logger.log(Level.INFO, exception.getMessage());
         }
         return result;
-
     }
 }

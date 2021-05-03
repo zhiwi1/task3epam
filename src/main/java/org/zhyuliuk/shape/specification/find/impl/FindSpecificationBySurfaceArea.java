@@ -19,7 +19,6 @@ public class FindSpecificationBySurfaceArea implements FindSpecification {
         this.maxDesiredArea = desiredAreaMax;
     }
 
-
     @Override
     public boolean specified(EntityBall entityBall) {
         double area = 0;

@@ -2,17 +2,17 @@ package org.zhyuliuk.shape.validator;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.zhyuliuk.shape.exception.ShapesException;
+
 
 public class ValidatorDataTest {
     @Test
-    public void isLineValidTest() throws ShapesException {
+    public void isLineValidTest() {
         String line = "name,1,2,3,4";
         Assert.assertTrue(DataValidator.isLineValid(line));
     }
 
     @Test
-    public void isFileValidTest() throws ShapesException {
+    public void isFileValidTest() {
         String line = "src/test/resources/testRead.txt";
         Assert.assertTrue(DataValidator.isFileValid(line));
     }

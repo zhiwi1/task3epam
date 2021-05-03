@@ -9,7 +9,7 @@ import org.zhyuliuk.shape.exception.ShapesException;
 
 public class CalculatingEntityBallActionTest {
     private final static CalculatingEntityBallAction calculatingEntityBallAction = CalculatingEntityBallActionImpl.getInstance();
-    private final static EntityBall entityBall = new EntityBall("name",new Point(0,0,0),1) ;
+    private final static EntityBall entityBall = new EntityBall("name", new Point(0, 0, 0), 1);
 
     @Test
     public void calculateSurfaceAreaTest() throws ShapesException {
@@ -32,8 +32,29 @@ public class CalculatingEntityBallActionTest {
     }
 
     @Test
-    public void isSphereTest() throws ShapesException {
+    public void isSphereTest() {
         boolean calculatingEntityBallActionSphere = calculatingEntityBallAction.isSphere(entityBall);
         Assert.assertTrue(calculatingEntityBallActionSphere);
+    }
+
+    @Test
+    public void relationOxyTest() throws ShapesException {
+        double expected = 1d;
+        double actual = calculatingEntityBallAction.calculateRelationOxy(entityBall);
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test
+    public void relationOxzTest() throws ShapesException {
+        double expected = 1d;
+        double actual = calculatingEntityBallAction.calculateRelationOxz(entityBall);
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test
+    public void relationOyzTest() throws ShapesException {
+        double expected = 1d;
+        double actual = calculatingEntityBallAction.calculateRelationOyz(entityBall);
+        Assert.assertEquals(actual, expected);
     }
 }

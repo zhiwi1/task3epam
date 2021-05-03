@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class BallRepositoryImpl implements org.zhyuliuk.shape.repository.BallRepository {
-    //singleton названия не забыть
     private static final BallRepository instance = new BallRepositoryImpl();
     private List<EntityBall> entityBallList;
 
@@ -21,13 +20,14 @@ public class BallRepositoryImpl implements org.zhyuliuk.shape.repository.BallRep
     private BallRepositoryImpl(List<EntityBall> entityBallList) {
         this.entityBallList = new ArrayList<>(entityBallList);
     }
+
     public static BallRepository getInstance() {
         return instance;
     }
+
     public List<EntityBall> getEntityBallList() {
         return new ArrayList<>(entityBallList);
     }
-
 
 
     @Override
@@ -59,10 +59,11 @@ public class BallRepositoryImpl implements org.zhyuliuk.shape.repository.BallRep
         }
         return list;
     }
+
     @Override
     public List<EntityBall> sorting(BallComparator comparator) {
 
-      return entityBallList.stream().sorted(comparator).collect(Collectors.toList());
+        return entityBallList.stream().sorted(comparator).collect(Collectors.toList());
 
     }
 }
